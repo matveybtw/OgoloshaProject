@@ -33,7 +33,6 @@ namespace DLL.Context
             modelBuilder.Entity<User>().HasOne(x => x.UserInfo).WithOne(x => x.User).HasForeignKey<User>(x=>x.Id);
             modelBuilder.Entity<Advert>().HasMany(x => x.Contacts);
             modelBuilder.Entity<Category>().HasMany(x => x.Subcategories).WithOne(x => x.Category);
-
             base.OnModelCreating(modelBuilder);
         }
     }

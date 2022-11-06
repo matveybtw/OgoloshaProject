@@ -20,8 +20,7 @@ namespace DLL.Repository
         {
             _ogoloshaContext.Subcategories.Add(entity);
             await _ogoloshaContext.SaveChangesAsync();
-        }
-
+        } 
         public async Task DeleteAsync(int id)
         {
             _ogoloshaContext.Subcategories.Remove(_ogoloshaContext.Subcategories.Find(id));
@@ -37,7 +36,7 @@ namespace DLL.Repository
         {
             return await _ogoloshaContext.Subcategories.FindAsync(id);
         }
-
+         
         public async Task UpdateAsync(int id, Subcategory entity)
         {
             var e = await _ogoloshaContext.Subcategories.FindAsync(id);
